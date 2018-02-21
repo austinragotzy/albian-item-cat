@@ -2,16 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
+    
     <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="/bootstrap-3.2.0-dist/js/bootstrap.min.js">
+    
 
-    </script>
+    
     <title>home</title>
   </head>
   <body>
     <nav class="navbar navbar-inverse" style="margin: 0px;">
       <div class="navbar-brand">
-        Albion Online
+        Resources
       </div>
       <div class="navbar-header pull-right">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
@@ -23,26 +24,32 @@
       </div>
       <div class="collapse navbar-collapse" id="nav-collapse">
         <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li>  <a href="about.html">About</a></li>
-            <li><a href="#">Vote</a></li>
+          <li ><a href="index.html">Home</a></li>
+          <li > <a href="about.html">About</a></li>
+          <li class="active"><a href="vote.html">Vote</a></li>
         </ul>
       </div>
     </nav>
-      <div class="jumbotron" style="background-image: url('Images/News_Banner.jpg');background-color:black; height: 100%; background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; color: white;">
+      <div class="jumbotron" style="background-image: url('Images/albionhome.jpg'); margin: 0; background-size: cover; color: blue;">
         <div class="container">
-          <h1>What is albion online?</h1>
-          <p>well i cant really explain it to you very well.</p>
+          
         </div>
       </div>
     <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav">
-        <li><a href="resource.html"><span></span> recources</a></li>
-        <li><a href="#"><span></span> tiers</a></li>
-        <li><a href="#"><span></span> prices</a></li>
       </ul>
     </nav>
+    <!-- Start of sidebar -->
+    <form action="vote_results.php" method="post">
+      <input type="radio" name="vote" value="0" checked> 0 pts. <br>
+      <input type="radio" name="vote" value="1"> 1 pt. <br>
+      <input type="radio" name="vote" value="2"> 2 pts. <br>
+      <input type="radio" name="vote" value="3"> 3 pts. <br>
+      <input type="radio" name="vote" value="4"> 4 pts. <br>
+      <input type="radio" name="vote" value="5"> 5 pts. <br>
+    
+      <input type="hidden" name="team_id" value="2">
+      <input type="submit" value="Vote">
+    </form>
   </body>
 </html>
