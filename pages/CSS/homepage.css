@@ -1,0 +1,33 @@
+#body{
+  background-color: black;
+}
+
+#featured-panel{
+  border: 0px black solid;
+  border-radius: 0px;
+}
+
+#featured-heading{
+  background-color: blue;
+  color: lightgrey;
+  border-radius: 0px;
+}
+
+#featured-body{
+  background-color: lightblue;
+}
+
+#info-panel{
+  border: 0px black solid;
+}
+
+#info-heading{
+  background-color: red;
+  color: darkgrey;
+  border: 0px black solid;
+  border-radius: 0px;
+}
+
+#info-body{
+  background-color: pink;
+}
