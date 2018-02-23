@@ -7,7 +7,7 @@
     <title>home</title>
   </head>
   <body id="body">
-    <nav class="navbar navbar-inverse" style="margin: 0px;">
+    <nav class="navbar navbar-inverse" style="margin: 0px;" id="top">
       <div class="navbar-brand">
         Albion Online
       </div>
@@ -20,11 +20,21 @@
         </button>
       </div>
       <div class="collapse navbar-collapse" id="nav-collapse">
-        <ul class="nav navbar-nav pull-right">
+        <ul class="nav navbar-nav pull-left">
             <li class="active"><a href="index.html">Home</a></li>
             <li>  <a href="about.html">About</a></li>
             <li><a href="#">Vote</a></li>
         </ul>
+        <form class="navbar-form navbar-right" action="index.html" method="">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="search">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </nav>
       <div class="jumbotron" style="background-image: url('Images/News_Banner.jpg');background-color:black; height: 100%; background-position: center;
@@ -37,7 +47,7 @@
       </div>
     <nav class="navbar navbar-inverse">
       <div class="navbar-brand">
-        <span class="glyphicon glyphicon-tree-conifer"></span><span class="glyphicon glyphicon-stats"></span><span class="glyphicon glyphicon-usd"></span>
+        <span class="glyphicon glyphicon-leaf"> </span><span class="glyphicon glyphicon-stats"> </span><span class="glyphicon glyphicon-tree-deciduous"> </span>
       </div>
       <div class="collapse navbar-collapse" id="nav-collapse2">
         <ul class="nav navbar-nav">
@@ -57,57 +67,109 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <article class="panel panel-default" id="info-panel">
-            <div class="panel-heading" id="info-heading">
-              <h3>Info</h3>
-            </div>
-            <div class="panel-body" id="info-body">
-              <p><span class="glyphicon glyphicon-tree-conifer"></span> this is a blerb about recources blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah</p>
-              <p><span class="glyphicon glyphicon-stats"></span> this is a blerb about tiers blah blah... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah</p>
-              <p><span class="glyphicon glyphicon-usd"></span> this is a blerb about price blah blah... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah blah blah.... blah</p>
-            </div>
-          </article>
+        <div class="col-md-4" id="recources">
+          <h1 id="recource-header"><span class="glyphicon glyphicon-leaf"></span></h1>
+          <h3>Recources</h3>
+          <p>here whe have a pragraph about recources maybe talk about what they are and how they work in the game and on our site</p>
         </div>
-        <div class="col-md-4">
-          <div class="panel panel-default" id="featured-panel">
+        <div class="col-md-4" id="tiers">
+          <h1 id="tier-header"><span class="glyphicon glyphicon-stats"></span></h1>
+          <h3>Tiers</h3>
+          <p>here whe have a pragraph about tiers maybe talk about what they are and how they work in the game and on our site</p>
+        </div>
+        <div class="col-md-4" id="biomes">
+          <h1 class="biomes-header"><span class="glyphicon glyphicon-tree-deciduous"></span></h1>
+          <h3>Biomes</h3>
+          <p>here whe have a pragraph about biomes maybe talk about what they are and how they work in the game and on our site</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="panel panel-default" id="featured-panel">
             <div class="panel-heading" id="featured-heading">
               <h3>Featured Items</h3>
             </div>
             <div class="panel-body" id="featured-body">
-              <div class="media">
-                <div class="pull-left">
-                  <img class="img-thumbnail" src="Images/block6.PNG" alt="a tier 6 block">
-                </div>
-                <div class="media-body">
-                  <h5 class="media-heading">Block tier 6</h5>
-                  <p>this block is tier 6 its super cool it does this that and the other you should cop this!</p>
-                </div>
-              </div>
-              <div class="media">
-                <div class="pull-left">
-                  <img class="img-thumbnail" src="Images/leather2.PNG" alt="a tier 2 leather">
-                </div>
-                <div class="media-body">
-                  <h5 class="media-heading">Leather tier 2</h5>
-                  <p>this Leather is tier 2 its super cool it does this that and the other you should cop this!</p>
+              <div class="col-md-4">
+                <div class="media">
+                  <div class="pull-left">
+                    <img class="img-thumbnail" src="Images/block6.PNG" alt="a tier 6 block">
+                  </div>
+                  <div class="media-body">
+                    <h5 class="media-heading">Block tier 6</h5>
+                    <p>this block is tier 6 its super cool it does this that and the other aren't they beautiful!</p>
+                  </div>
                 </div>
               </div>
-              <div class="media">
-                <div class="pull-left">
-                  <img class="img-thumbnail" src="Images/planks2.PNG" alt="a tier 2 Planks">
+              <div class="col-md-4">
+                <div class="media">
+                  <div class="pull-left">
+                    <img class="img-thumbnail" src="Images/leather2.PNG" alt="a tier 2 leather">
+                  </div>
+                  <div class="media-body">
+                    <h5 class="media-heading">Leather tier 2</h5>
+                    <p>this Leather is tier 2 its super cool it does this that and the other aren't they beautiful!</p>
+                  </div>
                 </div>
-                <div class="media-body">
-                  <h5 class="media-heading">Planks tier 2</h5>
-                  <p>these planks are tier 2 they are super cool they do this that and the other you should cop them!</p>
+              </div>
+              <div class="col-md-4">
+                <div class="media">
+                  <div class="pull-left">
+                    <img class="img-thumbnail" src="Images/planks2.PNG" alt="a tier 2 Planks">
+                  </div>
+                  <div class="media-body">
+                    <h5 class="media-heading">Planks tier 2</h5>
+                    <p>these planks are tier 2 they are super cool they do this that and the other aren't they beautiful!</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
       </div>
+
     </div>
+    <footer>
+
+      <div class="navbar navbar-inverse" id="top-foot-nav">
+        <a href="#top" class="pull-right" id="totop-button">^ Go to Top ^</a>
+        <form class="navbar-form" action="index.html" method="">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="search">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="foot-nav2" class="navbar navbar-inverse">
+        <div class="navbar-brand pull-left">
+          <div id="crest-cont">
+            <img id="crest" src="Images/Header_crest.png" alt="crest">
+          </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-left">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Vote</a></li>
+            <li><a href="#">Recources</a></li>
+            <li><a href="#">Tiers</a></li>
+            <li><a href="#">Biomes</a></li>
+          </ul>
+        </div>
+        <div class="navbar-header pull-left">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <p id="credit" class="pull-right">This website is brought to you by Nick and Austin</p>
+      </div>
+
+    </footer>
 
   </body>
 </html>
