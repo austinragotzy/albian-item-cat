@@ -57,10 +57,33 @@
   color: white;
   text-align: center;
 }
-
+#recources-link{
+  color: white;
+  transition: color 1s;
+}
+#tiers-link{
+  color: white;
+  transition: color 1s;
+}
+#biomes-link{
+  color: white;
+  transition: color 1s;
+}
+#recources-link:hover{
+  color: maroon;
+  text-decoration: none;
+}
+#tiers-link:hover{
+  color: maroon;
+  text-decoration: none;
+}
+#biomes-link:hover{
+  color: maroon;
+  text-decoration: none;
+}
 #totop-button{
-  color: lightblue;
-  background-color: blue;
+  color: pink;
+  background-color: maroon;
   border-radius: 4px;
   margin-top: 12px;
   margin-bottom: auto;
@@ -69,8 +92,8 @@
   transition: color 1s, background-color 1s;
 }
 #totop-button:hover{
-  color: pink;
-  background-color: red;
+  color: lightblue;
+  background-color: blue;
   text-decoration: none;
 
 }
