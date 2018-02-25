@@ -74,26 +74,32 @@
     </nav>
     <!-- header ends here -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h2>why 5?</h2>
-          <h5>In short, the website is inpeccable</h5>
-          <p>In long, the i's have been dotted and t's have been crossed. we
-            have demonstrated many features of HTML, CSS, Bootstrap, and
-            Javascript. </p>
-        </div>
-        <div class="col-md-5">
-          <form action="vote_results.php" method="post">
-            <input type="radio" name="vote" value="0"> 0 pts. <br>
-            <input type="radio" name="vote" value="1"> 1 pt. <br>
-            <input type="radio" name="vote" value="2"> 2 pts. <br>
-            <input type="radio" name="vote" value="3"> 3 pts. <br>
-            <input type="radio" name="vote" value="4"> 4 pts. <br>
-            <input type="radio" name="vote" value="5" checked> 5 pts. <br>
+      <div id="why" class="row">
+        <h2>why 5 pts.?</h2>
+        <h5>In short, the website is inpeccable</h5>
+        <p>In long, the i's have been dotted and t's have been crossed. we
+          have demonstrated many features of HTML, CSS, Bootstrap, and
+          Javascript. </p>
+      </div>
+      <div id="vote-here" class="row">
+        <hr>
+        <div id="vote-panel" class="panel panel-default">
+          <div id="vote-header" class="panel-heading">
+            <h2>Vote Here!</h2>
+          </div>
+          <div id="vote-body" class="panel-body">
+            <form action="vote_results.php" method="post">
+              <input type="radio" name="vote" value="0"> 0 pts. <br>
+              <input type="radio" name="vote" value="1"> 1 pt. <br>
+              <input type="radio" name="vote" value="2"> 2 pts. <br>
+              <input type="radio" name="vote" value="3"> 3 pts. <br>
+              <input type="radio" name="vote" value="4"> 4 pts. <br>
+              <input type="radio" name="vote" value="5" checked> 5 pts. <br>
 
-            <input type="hidden" name="team_id" value="2">
-            <input type="submit" value="Vote">
-          </form>
+              <input type="hidden" name="team_id" value="2">
+              <input type="submit" value="Vote">
+            </form>
+          </div>
         </div>
       </div>
     </div>

@@ -148,3 +148,35 @@
 #whowhat h2{
   font-size: 3em;
 }
+
+/*vote page stuff*/
+#why{
+  margin: 3em 0em 4em 0em;
+  color: lightgray;
+  text-align: center;
+}
+#why h2{
+  font-size: 4em;
+}
+#why h5{
+  font-size: 2.5em;
+}
+#why p{
+  font-size: 2em;
+}
+#vote-header{
+  background-color: maroon;
+  color: gray;
+  border-bottom: black 3px solid;
+}
+#vote-panel{
+  margin: 8em 0em 3em 0em;
+}
+#vote-header h2{
+  font-size: 3em;
+}
+#vote-body{
+  background-color: gray;
+  color: white;
+  font-size: 2em;
+}
