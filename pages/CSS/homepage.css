@@ -180,3 +180,12 @@
   color: white;
   font-size: 2em;
 }
+#vote-btn{
+  background-color: maroon;
+  color: darkgray;
+  transition: background-color 1s, color 1s;
+}
+#vote-btn:hover{
+  background-color: lightgray;
+  color: maroon;
+}
