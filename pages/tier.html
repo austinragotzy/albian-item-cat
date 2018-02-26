@@ -6,7 +6,75 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function changeTable(tier){
+                var resourceType = ["FIBER","CLOTH","HIDE","LEATHER","ORE","METALBAR","WOOD","PLANKS","ROCK","STONEBLOCK"];
+                
+                if(tier == 2)
+                {
+                    document.getElementById("tierFirst").innerText = tier;
+                    document.getElementById("tierSecond").innerText = tier+1;
+                    
 
+                    for(j = 0; j<2; j++)
+                    {
+                        for( i = 0; i < 10; i++)
+                        {
+                            if(j == 0)
+                            {
+                                document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+".png";
+                            }
+                            else
+                            {
+                                tier = 3;
+                                document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+".png";
+                            }
+                        }
+                    }
+
+                    for(j = 2; j<4; j++)
+                    {
+                        for( i = 0; i < 10; i++)
+                        {
+                            if(j == 0)
+                            {
+                                document.getElementById(j+"-"+i).src = "";
+                                document.getElementById("4-3").style.color = "black";
+                            }
+                            
+                        }
+                    }
+
+                }
+                else
+                {
+                    document.getElementById("tierFirst").innerText = tier+".0";
+                    document.getElementById("tierSecond").innerText = tier+".1";
+                    document.getElementById("tierThird").innerText = tier+".2";
+                    document.getElementById("tierFourth").innerText = tier+".3";
+
+                    for(j = 0; j<4; j++)
+                    {
+                        for( i = 0; i < 10; i++)
+                        {
+                            if(j == 0)
+                            {
+                                document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+".png";
+                            }
+                            else
+                            {
+                                document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+"_LEVEL"+j+".png";
+                            }
+                        }
+                    }
+                }
+
+                
+                alert(done);
+            }
+
+            
+        </script>
     
     <title>home</title>
   </head>
@@ -42,322 +110,104 @@
     </nav>
     <div class = "container">
         <div class = "row">
-            
-            <div class = "col-md-12">
-                <div class = "">
-                    <table class = "table table-bordered">
-                        <thead>
-                            <tr>
-                                <td>Resource</td>
-                                <td>Fiber</td>
-                                <td>Cloth</td>
-                                <td>Hide</td>
-                                <td>Leather</td>
-                                <td>Ore</td>
-                                <td>Metal</td>
-                                <td>Wood</td>
-                                <td>Planks</td>
-                                <td>Stone</td>
-                                <td>Block</td>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                            <tr>
-                                <td>Tier 2</td>
-                                <td><img src = "Images/fiber/T2_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T2_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T2_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T2_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T2_ORE.png  "                    ></td>
-                                <td><img src = "Images/metal/T2_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T2_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T2_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T2_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T2_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 3</td>
-                                <td><img src = "Images/fiber/T3_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T3_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T3_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T3_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T3_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T3_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T3_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T3_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T3_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T3_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 4.0</td>
-                                <td><img src = "Images/fiber/T4_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T4_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T4_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T4_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T4_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T4_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T4_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T4_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T4_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T4_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 4.1</td>
-                                <td><img src = "Images/fiber/T4_FIBER_LEVEL1.png"           ></td>
-                                <td><img src = "Images/cloth/T4_CLOTH_LEVEL1.png"           ></td>
-                                <td><img src = "Images/hide/T4_HIDE_LEVEL1.png"             ></td>
-                                <td><img src = "Images/leather/T4_LEATHER_LEVEL1.png"       ></td>
-                                <td><img src = "Images/ore/T4_ORE_LEVEL1.png"               ></td>
-                                <td><img src = "Images/metal/T4_METALBAR_LEVEL1.png"        ></td>
-                                <td><img src = "Images/wood/T4_WOOD_LEVEL1.png"             ></td>
-                                <td><img src = "Images/planks/T4_PLANKS_LEVEL1.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 4.2</td>
-                                <td><img src = "Images/fiber/T4_FIBER_LEVEL2.png"           ></td>
-                                <td><img src = "Images/cloth/T4_CLOTH_LEVEL2.png"           ></td>
-                                <td><img src = "Images/hide/T4_HIDE_LEVEL2.png"             ></td>
-                                <td><img src = "Images/leather/T4_LEATHER_LEVEL2.png"       ></td>
-                                <td><img src = "Images/ore/T4_ORE_LEVEL2.png"               ></td>
-                                <td><img src = "Images/metal/T4_METALBAR_LEVEL2.png"        ></td>
-                                <td><img src = "Images/wood/T4_WOOD_LEVEL2.png"             ></td>
-                                <td><img src = "Images/planks/T4_PLANKS_LEVEL2.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 4.3</td>
-                                <td><img src = "Images/fiber/T4_FIBER_LEVEL3.png"           ></td>
-                                <td><img src = "Images/cloth/T4_CLOTH_LEVEL3.png"           ></td>
-                                <td><img src = "Images/hide/T4_HIDE_LEVEL3.png"             ></td>
-                                <td><img src = "Images/leather/T4_LEATHER_LEVEL3.png"       ></td>
-                                <td><img src = "Images/ore/T4_ORE_LEVEL3.png"               ></td>
-                                <td><img src = "Images/metal/T4_METALBAR_LEVEL3.png"        ></td>
-                                <td><img src = "Images/wood/T4_WOOD_LEVEL3.png"             ></td>
-                                <td><img src = "Images/planks/T4_PLANKS_LEVEL3.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 5.0</td>
-                                <td><img src = "Images/fiber/T5_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T5_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T5_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T5_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T5_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T5_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T5_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T5_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T5_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T5_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 5.1</td>
-                                <td><img src = "Images/fiber/T5_FIBER_LEVEL1.png"           ></td>
-                                <td><img src = "Images/cloth/T5_CLOTH_LEVEL1.png"           ></td>
-                                <td><img src = "Images/hide/T5_HIDE_LEVEL1.png"             ></td>
-                                <td><img src = "Images/leather/T5_LEATHER_LEVEL1.png"       ></td>
-                                <td><img src = "Images/ore/T5_ORE_LEVEL1.png"               ></td>
-                                <td><img src = "Images/metal/T5_METALBAR_LEVEL1.png"        ></td>
-                                <td><img src = "Images/wood/T5_WOOD_LEVEL1.png"             ></td>
-                                <td><img src = "Images/planks/T5_PLANKS_LEVEL1.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 5.2</td>
-                                <td><img src = "Images/fiber/T5_FIBER_LEVEL2.png"           ></td>
-                                <td><img src = "Images/cloth/T5_CLOTH_LEVEL2.png"           ></td>
-                                <td><img src = "Images/hide/T5_HIDE_LEVEL2.png"             ></td>
-                                <td><img src = "Images/leather/T5_LEATHER_LEVEL2.png"       ></td>
-                                <td><img src = "Images/ore/T5_ORE_LEVEL2.png"               ></td>
-                                <td><img src = "Images/metal/T5_METALBAR_LEVEL2.png"        ></td>
-                                <td><img src = "Images/wood/T5_WOOD_LEVEL2.png"             ></td>
-                                <td><img src = "Images/planks/T5_PLANKS_LEVEL2.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 5.3</td>
-                                <td><img src = "Images/fiber/T5_FIBER_LEVEL3.png"           ></td>
-                                <td><img src = "Images/cloth/T5_CLOTH_LEVEL3.png"           ></td>
-                                <td><img src = "Images/hide/T5_HIDE_LEVEL3.png"             ></td>
-                                <td><img src = "Images/leather/T5_LEATHER_LEVEL3.png"       ></td>
-                                <td><img src = "Images/ore/T5_ORE_LEVEL3.png"               ></td>
-                                <td><img src = "Images/metal/T5_METALBAR_LEVEL3.png"        ></td>
-                                <td><img src = "Images/wood/T5_WOOD_LEVEL3.png"             ></td>
-                                <td><img src = "Images/planks/T5_PLANKS_LEVEL3.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 6.0</td>
-                                <td><img src = "Images/fiber/T6_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T6_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T6_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T6_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T6_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T6_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T6_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T6_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T6_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T6_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 6.1</td>
-                                <td><img src = "Images/fiber/T6_FIBER_LEVEL1.png"           ></td>
-                                <td><img src = "Images/cloth/T6_CLOTH_LEVEL1.png"           ></td>
-                                <td><img src = "Images/hide/T6_HIDE_LEVEL1.png"             ></td>
-                                <td><img src = "Images/leather/T6_LEATHER_LEVEL1.png"       ></td>
-                                <td><img src = "Images/ore/T6_ORE_LEVEL1.png"               ></td>
-                                <td><img src = "Images/metal/T6_METALBAR_LEVEL1.png"        ></td>
-                                <td><img src = "Images/wood/T6_WOOD_LEVEL1.png"             ></td>
-                                <td><img src = "Images/planks/T6_PLANKS_LEVEL1.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 6.2</td>
-                                <td><img src = "Images/fiber/T6_FIBER_LEVEL2.png"           ></td>
-                                <td><img src = "Images/cloth/T6_CLOTH_LEVEL2.png"           ></td>
-                                <td><img src = "Images/hide/T6_HIDE_LEVEL2.png"             ></td>
-                                <td><img src = "Images/leather/T6_LEATHER_LEVEL2.png"       ></td>
-                                <td><img src = "Images/ore/T6_ORE_LEVEL2.png"               ></td>
-                                <td><img src = "Images/metal/T6_METALBAR_LEVEL2.png"        ></td>
-                                <td><img src = "Images/wood/T6_WOOD_LEVEL2.png"             ></td>
-                                <td><img src = "Images/planks/T6_PLANKS_LEVEL2.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 6.3</td>
-                                <td><img src = "Images/fiber/T6_FIBER_LEVEL3.png"           ></td>
-                                <td><img src = "Images/cloth/T6_CLOTH_LEVEL3.png"           ></td>
-                                <td><img src = "Images/hide/T6_HIDE_LEVEL3.png"             ></td>
-                                <td><img src = "Images/leather/T6_LEATHER_LEVEL3.png"       ></td>
-                                <td><img src = "Images/ore/T6_ORE_LEVEL3.png"               ></td>
-                                <td><img src = "Images/metal/T6_METALBAR_LEVEL3.png"        ></td>
-                                <td><img src = "Images/wood/T6_WOOD_LEVEL3.png"             ></td>
-                                <td><img src = "Images/planks/T6_PLANKS_LEVEL3.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 7.0</td>
-                                <td><img src = "Images/fiber/T7_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T7_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T7_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T7_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T7_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T7_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T7_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T7_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T7_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T7_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 7.1</td>
-                                <td><img src = "Images/fiber/T7_FIBER_LEVEL1.png"           ></td>
-                                <td><img src = "Images/cloth/T7_CLOTH_LEVEL1.png"           ></td>
-                                <td><img src = "Images/hide/T7_HIDE_LEVEL1.png"             ></td>
-                                <td><img src = "Images/leather/T7_LEATHER_LEVEL1.png"       ></td>
-                                <td><img src = "Images/ore/T7_ORE_LEVEL1.png"               ></td>
-                                <td><img src = "Images/metal/T7_METALBAR_LEVEL1.png"        ></td>
-                                <td><img src = "Images/wood/T7_WOOD_LEVEL1.png"             ></td>
-                                <td><img src = "Images/planks/T7_PLANKS_LEVEL1.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 7.2</td>
-                                <td><img src = "Images/fiber/T7_FIBER_LEVEL2.png"           ></td>
-                                <td><img src = "Images/cloth/T7_CLOTH_LEVEL2.png"           ></td>
-                                <td><img src = "Images/hide/T7_HIDE_LEVEL2.png"             ></td>
-                                <td><img src = "Images/leather/T7_LEATHER_LEVEL2.png"       ></td>
-                                <td><img src = "Images/ore/T7_ORE_LEVEL2.png"               ></td>
-                                <td><img src = "Images/metal/T7_METALBAR_LEVEL2.png"        ></td>
-                                <td><img src = "Images/wood/T7_WOOD_LEVEL2.png"             ></td>
-                                <td><img src = "Images/planks/T7_PLANKS_LEVEL2.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 7.3</td>
-                                <td><img src = "Images/fiber/T7_FIBER_LEVEL3.png"           ></td>
-                                <td><img src = "Images/cloth/T7_CLOTH_LEVEL3.png"           ></td>
-                                <td><img src = "Images/hide/T7_HIDE_LEVEL3.png"             ></td>
-                                <td><img src = "Images/leather/T7_LEATHER_LEVEL3.png"       ></td>
-                                <td><img src = "Images/ore/T7_ORE_LEVEL3.png"               ></td>
-                                <td><img src = "Images/metal/T7_METALBAR_LEVEL3.png"        ></td>
-                                <td><img src = "Images/wood/T7_WOOD_LEVEL3.png"             ></td>
-                                <td><img src = "Images/planks/T7_PLANKS_LEVEL3.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 8.0</td>
-                                <td><img src = "Images/fiber/T8_FIBER.png"                  ></td>
-                                <td><img src = "Images/cloth/T8_CLOTH.png"                  ></td>
-                                <td><img src = "Images/hide/T8_HIDE.png"                    ></td>
-                                <td><img src = "Images/leather/T8_LEATHER.png"              ></td>
-                                <td><img src = "Images/ore/T8_ORE.png"                      ></td>
-                                <td><img src = "Images/metal/T8_METALBAR.png"               ></td>
-                                <td><img src = "Images/wood/T8_WOOD.png"                    ></td>
-                                <td><img src = "Images/planks/T8_PLANKS.png"                ></td>
-                                <td><img src = "Images/stone/T8_ROCK.png"                   ></td>
-                                <td><img src = "Images/block/T8_STONEBLOCK.png"             ></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 8.1</td>
-                                <td><img src = "Images/fiber/T8_FIBER_LEVEL1.png"           ></td>
-                                <td><img src = "Images/cloth/T8_CLOTH_LEVEL1.png"           ></td>
-                                <td><img src = "Images/hide/T8_HIDE_LEVEL1.png"             ></td>
-                                <td><img src = "Images/leather/T8_LEATHER_LEVEL1.png"       ></td>
-                                <td><img src = "Images/ore/T8_ORE_LEVEL1.png"               ></td>
-                                <td><img src = "Images/metal/T8_METALBAR_LEVEL1.png"        ></td>
-                                <td><img src = "Images/wood/T8_WOOD_LEVEL1.png"             ></td>
-                                <td><img src = "Images/planks/T8_PLANKS_LEVEL1.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 8.2</td>
-                                <td><img src = "Images/fiber/T8_FIBER_LEVEL2.png"           ></td>
-                                <td><img src = "Images/cloth/T8_CLOTH_LEVEL2.png"           ></td>
-                                <td><img src = "Images/hide/T8_HIDE_LEVEL2.png"             ></td>
-                                <td><img src = "Images/leather/T8_LEATHER_LEVEL2.png"       ></td>
-                                <td><img src = "Images/ore/T8_ORE_LEVEL2.png"               ></td>
-                                <td><img src = "Images/metal/T8_METALBAR_LEVEL2.png"        ></td>
-                                <td><img src = "Images/wood/T8_WOOD_LEVEL2.png"             ></td>
-                                <td><img src = "Images/planks/T8_PLANKS_LEVEL2.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                            <tr>
-                                <td>Tier 8.3</td>
-                                <td><img src = "Images/fiber/T8_FIBER_LEVEL3.png"           ></td>
-                                <td><img src = "Images/cloth/T8_CLOTH_LEVEL3.png"           ></td>
-                                <td><img src = "Images/hide/T8_HIDE_LEVEL3.png"             ></td>
-                                <td><img src = "Images/leather/T8_LEATHER_LEVEL3.png"       ></td>
-                                <td><img src = "Images/ore/T8_ORE_LEVEL3.png"               ></td>
-                                <td><img src = "Images/metal/T8_METALBAR_LEVEL3.png"        ></td>
-                                <td><img src = "Images/wood/T8_WOOD_LEVEL3.png"             ></td>
-                                <td><img src = "Images/planks/T8_PLANKS_LEVEL3.png"         ></td>
-                                <td><img></td>
-                                <td><img></td>
-                            </tr>
-                        </tbody>
-                        
-                        <tfoot>
-
-                        </tfoot>
-                    </table>
+            <div class = "col-md-2">
+                <div class = " panel-group">
+                        <!-- Start of sidebar -->
+                    <div class="panel panel-default">
+                        <div class = "panel panel-header">
+                            Tiers
+                        </div>
+                        <div class = "panel-body">
+                            <p> <a href = "#" onClick="changeTable(2)">2-3</a></p>
+                            <p> <a href = "#" onClick="changeTable(4)">4</a></p>
+                            <p> <a href = "#" onClick="changeTable(5)">5</a></p>
+                            <p> <a href = "#" onClick="changeTable(6)">6</a></p>
+                            <p> <a href = "#" onClick="changeTable(7)">7</a></p>
+                            <p> <a href = "#" onClick="changeTable(8)">8</a></p>
+                        </div>
+                    </div>
+                    <!-- End of sidebar -->
                 </div>
+            </div>
+            <div = class = "col-md-10">
+                <table class = "table table-bordered">
+                
+                <thead>
+                    <tr>
+                        <td>Resource</td>
+                        <td>Fiber</td>
+                        <td>Cloth</td>
+                        <td>Hide</td>
+                        <td>Leather</td>
+                        <td>Ore</td>
+                        <td>Metal</td>
+                        <td>Wood</td>
+                        <td>Planks</td>
+                        <td>Stone</td>
+                        <td>Block</td>
+                    </tr>
+                </thead>
+                
+
+                <tbody>
+                    <tr>
+                        <td>Tier <span id = "tierFirst"></span></td>
+                        <td><img src = "" id = "0-0"                 ></td>
+                        <td><img src = "" id = "0-1"                 ></td>
+                        <td><img src = "" id = "0-2"                   ></td>
+                        <td><img src = "" id = "0-3"             ></td>
+                        <td><img src = "" id = "0-4"                   ></td>
+                        <td><img src = "" id = "0-5"              ></td>
+                        <td><img src = "" id = "0-6"                   ></td>
+                        <td><img src = "" id = "0-7"               ></td>
+                        <td><img src = "" id = "0-8"                  ></td>
+                        <td><img src = "" id = "0-9"            ></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tier <span id = "tierSecond"></span></td>
+                        <td><img src = ""  id = "1-0"                ></td>
+                        <td><img src = ""  id = "1-1"                ></td>
+                        <td><img src = ""  id = "1-2"                  ></td>
+                        <td><img src = ""  id = "1-3"            ></td>
+                        <td><img src = ""  id = "1-4"                  ></td>
+                        <td><img src = ""  id = "1-5"             ></td>
+                        <td><img src = ""  id = "1-6"                  ></td>
+                        <td><img src = ""  id = "1-7"             ></td>
+                        <td><img src = ""  id = "1-8"                ></td>
+                        <td><img src = ""  id = "1-9"           ></td>
+                    </tr>
+                    <tr>
+                        <td>Tier <span id = "tierThird"></span></td>
+                        <td id = "4-3"><img src = ""  id = "2-0"                ></td>
+                        <td><img src = ""  id = "2-1"                ></td>
+                        <td><img src = ""  id = "2-2"                  ></td>
+                        <td><img src = ""  id = "2-3"            ></td>
+                        <td><img src = ""  id = "2-4"                 ></td>
+                        <td><img src = ""  id = "2-5"             ></td>
+                        <td><img src = ""  id = "2-6"                  ></td>
+                        <td><img src = ""  id = "2-7"              ></td>
+                        <td><img src = ""  id = "2-8"                 ></td>
+                        <td><img src = ""  id = "2-9"           ></td>
+                    </tr>
+                    <tr id = "4">
+                        <td>Tier <span id = "tierFourth"></span></td>
+                        <td><img src = ""  id = "3-0"                ></td>
+                        <td><img src = ""  id = "3-1"                ></td>
+                        <td><img src = ""  id = "3-2"                  ></td>
+                        <td><img src = ""  id = "3-3"            ></td>
+                        <td><img src = ""  id = "3-4"                 ></td>
+                        <td><img src = ""  id = "3-5"             ></td>
+                        <td><img src = ""  id = "3-6"                  ></td>
+                        <td><img src = ""  id = "3-7"              ></td>
+                        <td><img src = ""  id = "3-8"                 ></td>
+                        <td><img src = ""  id = "3-9"           ></td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
         </div>
     </div>
+    
   </body>
 </html>
