@@ -118,3 +118,74 @@
 #credit{
   color: gray;
 }
+/*all stuff not for homepage under here*/
+#about-tools-used{
+  color: lightgray;
+  text-align: center;
+}
+#about-tools-used h3{
+  font-size: 2.5em;
+}
+#about-tools-used p{
+  font-size: 1.6em;
+}
+.logo-cont{
+  margin-right: auto;
+  margin-left: auto;
+  height: 5em;
+  width: auto;
+}
+.logo-cont img{
+  height: 100%;
+  width: auto;
+}
+
+#whowhat{
+  text-align: center;
+  font-size: 2em;
+  color: lightgray;
+}
+#whowhat h2{
+  font-size: 3em;
+}
+
+/*vote page stuff*/
+#why{
+  margin: 3em 0em 4em 0em;
+  color: lightgray;
+  text-align: center;
+}
+#why h2{
+  font-size: 4em;
+}
+#why h5{
+  font-size: 2.5em;
+}
+#why p{
+  font-size: 2em;
+}
+#vote-header{
+  background-color: maroon;
+  color: gray;
+  border-bottom: black 3px solid;
+}
+#vote-panel{
+  margin: 8em 0em 3em 0em;
+}
+#vote-header h2{
+  font-size: 3em;
+}
+#vote-body{
+  background-color: gray;
+  color: white;
+  font-size: 2em;
+}
+#vote-btn{
+  background-color: maroon;
+  color: darkgray;
+  transition: background-color 1s, color 1s;
+}
+#vote-btn:hover{
+  background-color: lightgray;
+  color: maroon;
+}
