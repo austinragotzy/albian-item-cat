@@ -11,7 +11,7 @@
         <script>
             function changeTable(tier){
                 var resourceType = ["FIBER","CLOTH","HIDE","LEATHER","ORE","METALBAR","WOOD","PLANKS","ROCK","STONEBLOCK"];
-                
+
                 if(tier == 2)
                 {
                     document.getElementById("tierFirst").innerText = "Tier: "+tier;
@@ -65,7 +65,7 @@
                             }
                         }
                     }
-                    
+
                     document.getElementById("1-8").src = "Images/ROCK/T"+tier+"_ROCK.png";
                     document.getElementById("1-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
 
@@ -76,9 +76,9 @@
                     document.getElementById("3-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
                 }
             }
-            
+
         </script>
-    
+
     <title>Tier</title>
   </head>
   <body id="body">
@@ -100,18 +100,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="vote.html">Vote</a></li>
-            <li>
-              <form class="navbar-form navbar-left" action="index.html" method="">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="search">
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </li>
         </ul>
       </div>
 
@@ -120,7 +108,7 @@
       <div class="jumbotron" style="background-image: url('Images/News_Banner.jpg');background-color:black; height: 100%; background-position: center;
       background-repeat: no-repeat; margin: 0px;
       background-size: cover; color: white;">
-        
+
       </div>
     <nav class="navbar navbar-inverse">
       <div class="navbar-brand">
@@ -161,12 +149,12 @@
                             <p> <a  onClick="changeTable(8)">8</a></p>
                         </div>
                     </div>
-                    <!-- End of sidebar -->  
-                </div>  
-            </div>           
+                    <!-- End of sidebar -->
+                </div>
+            </div>
             <div = class = "col-md-10">
                 <table class = "table table-bordered">
-                
+
                 <thead>
                     <tr>
                         <td>Resource</td>
@@ -182,7 +170,7 @@
                         <td>Block</td>
                     </tr>
                 </thead>
-                
+
 
                 <tbody>
                     <tr>
@@ -244,23 +232,13 @@
         </div>
     </div>
 
-    
+
 
     <!--footer starts here-->
     <footer>
 
       <div class="navbar navbar-inverse" id="top-foot-nav">
         <a href="#top" class="pull-right" id="totop-button">^ Go to Top ^</a>
-        <form class="navbar-form" action="index.html" method="">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="search">
-            <div class="input-group-btn">
-              <button type="submit" class="btn btn-default">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </div>
-          </div>
-        </form>
       </div>
       <div id="foot-nav2" class="navbar navbar-inverse">
         <div class="navbar-brand pull-left">
