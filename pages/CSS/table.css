@@ -1,0 +1,23 @@
+td{
+    color: white;
+}
+h3{
+    color:white;
+}
+
+.panel-header{
+    background-color: maroon;
+}
+.panel-header h3{
+    text-align: center;
+}
+.panel-body{
+    background-color: tan;
+}
+.panel-body a{    
+    padding:1em;
+    font-size: 1.5em;
+}
+#tableHead{
+    background-color: maroon;
+}

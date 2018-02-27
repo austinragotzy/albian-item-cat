@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="CSS/homepage.css">
+        <link rel="stylesheet" href="CSS/table.css">
         <script>
             function changeTable(tier){
                 var resourceType = ["FIBER","CLOTH","HIDE","LEATHER","ORE","METALBAR","WOOD","PLANKS","ROCK","STONEBLOCK"];
@@ -14,7 +15,7 @@
                 if(tier == 2)
                 {
                     document.getElementById("tierFirst").innerText = "Tier: "+tier;
-                    document.getElementById("tierSecond").innerText = "Tier: "+tier+1;
+                    document.getElementById("tierSecond").innerText = "Tier: "+(tier+1);
                     document.getElementById("tierThird").innerText = "No Resources";
                     document.getElementById("tierFourth").innerText = "No Resources";
 
@@ -38,10 +39,8 @@
                     {
                         for( i = 0; i < 10; i++)
                         {
-                            
                             document.getElementById(j+"-"+i).src = "";
                             document.getElementById("4-3").style.color = "black";
-                            
                         }
                     }
                 }
@@ -64,7 +63,6 @@
                             {
                                 document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+"_LEVEL"+j+".png";
                             }
-
                         }
                     }
                     
@@ -77,11 +75,7 @@
                     document.getElementById("3-8").src = "Images/ROCK/T"+tier+"_ROCK.png";
                     document.getElementById("3-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
                 }
-
-                
-                
             }
-
             
         </script>
     
@@ -152,11 +146,11 @@
     <div class = "container">
         <div class = "row">
             <div class = "col-md-2">
-                <div class = " panel-group">
+                <div class = " panel-group" id = "sidePanel">
                         <!-- Start of sidebar -->
                     <div class="panel panel-default">
                         <div class = "panel panel-header">
-                            Tiers
+                            <h3>Tiers</h3>
                         </div>
                         <div class = "panel-body">
                             <p> <a  onClick="changeTable(2)">2-3</a></p>
