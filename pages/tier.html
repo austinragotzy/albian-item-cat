@@ -13,9 +13,10 @@
                 
                 if(tier == 2)
                 {
-                    document.getElementById("tierFirst").innerText = tier;
-                    document.getElementById("tierSecond").innerText = tier+1;
-                    
+                    document.getElementById("tierFirst").innerText = "Tier: "+tier;
+                    document.getElementById("tierSecond").innerText = "Tier: "+tier+1;
+                    document.getElementById("tierThird").innerText = "No Resources";
+                    document.getElementById("tierFourth").innerText = "No Resources";
 
                     for(j = 0; j<2; j++)
                     {
@@ -37,26 +38,23 @@
                     {
                         for( i = 0; i < 10; i++)
                         {
-                            if(j == 0)
-                            {
-                                document.getElementById(j+"-"+i).src = "";
-                                document.getElementById("4-3").style.color = "black";
-                            }
+                            
+                            document.getElementById(j+"-"+i).src = "";
+                            document.getElementById("4-3").style.color = "black";
                             
                         }
                     }
-
                 }
                 else
                 {
-                    document.getElementById("tierFirst").innerText = tier+".0";
-                    document.getElementById("tierSecond").innerText = tier+".1";
-                    document.getElementById("tierThird").innerText = tier+".2";
-                    document.getElementById("tierFourth").innerText = tier+".3";
+                    document.getElementById("tierFirst").innerText = "Tier: "+tier+".0";
+                    document.getElementById("tierSecond").innerText = "Tier: "+tier+".1";
+                    document.getElementById("tierThird").innerText = "Tier: "+tier+".2";
+                    document.getElementById("tierFourth").innerText = "Tier: "+tier+".3";
 
                     for(j = 0; j<4; j++)
                     {
-                        for( i = 0; i < 10; i++)
+                        for(i = 0; i < 10; i++)
                         {
                             if(j == 0)
                             {
@@ -66,8 +64,18 @@
                             {
                                 document.getElementById(j+"-"+i).src = "Images/"+resourceType[i]+"/T"+tier+"_"+resourceType[i]+"_LEVEL"+j+".png";
                             }
+
                         }
                     }
+                    
+                    document.getElementById("1-8").src = "Images/ROCK/T"+tier+"_ROCK.png";
+                    document.getElementById("1-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
+
+                    document.getElementById("2-8").src = "Images/ROCK/T"+tier+"_ROCK.png";
+                    document.getElementById("2-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
+
+                    document.getElementById("3-8").src = "Images/ROCK/T"+tier+"_ROCK.png";
+                    document.getElementById("3-9").src = "Images/STONEBLOCK/T"+tier+"_STONEBLOCK.png";
                 }
 
                 
@@ -184,7 +192,7 @@
 
                 <tbody>
                     <tr>
-                        <td>Tier <span id = "tierFirst"></span></td>
+                        <td> <span id = "tierFirst"></span></td>
                         <td><img src = "" id = "0-0"                 ></td>
                         <td><img src = "" id = "0-1"                 ></td>
                         <td><img src = "" id = "0-2"                   ></td>
@@ -198,7 +206,7 @@
                     </tr>
 
                     <tr>
-                        <td>Tier <span id = "tierSecond"></span></td>
+                        <td> <span id = "tierSecond"></span></td>
                         <td><img src = ""  id = "1-0"                ></td>
                         <td><img src = ""  id = "1-1"                ></td>
                         <td><img src = ""  id = "1-2"                  ></td>
@@ -211,7 +219,7 @@
                         <td><img src = ""  id = "1-9"           ></td>
                     </tr>
                     <tr>
-                        <td>Tier <span id = "tierThird"></span></td>
+                        <td> <span id = "tierThird"></span></td>
                         <td id = "4-3"><img src = ""  id = "2-0"                ></td>
                         <td><img src = ""  id = "2-1"                ></td>
                         <td><img src = ""  id = "2-2"                  ></td>
@@ -224,7 +232,7 @@
                         <td><img src = ""  id = "2-9"           ></td>
                     </tr>
                     <tr id = "4">
-                        <td>Tier <span id = "tierFourth"></span></td>
+                        <td> <span id = "tierFourth"></span></td>
                         <td><img src = ""  id = "3-0"                ></td>
                         <td><img src = ""  id = "3-1"                ></td>
                         <td><img src = ""  id = "3-2"                  ></td>
